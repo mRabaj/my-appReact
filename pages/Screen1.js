@@ -10,7 +10,7 @@ const FirstPage = ({ navigation }) => {
     const [data, setData] = useState([]);
 
 
-    fetch('http://192.168.1.66/developpement/symfony/webservices/public/customers/')
+    fetch('http://10.114.41.78/developpement/symfony/webservices/public/customers/')
     .then((response) => response.json())
       .then((json) =>setData(json))
       

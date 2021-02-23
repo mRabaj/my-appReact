@@ -20,7 +20,7 @@ const SecondPage = ({ navigation }) => {
           }
           let location = await Location.getCurrentPositionAsync({});
        
-        fetch('http://192.168.1.66/developpement/symfony/webservices/public/customers/coord/'+location.coords.latitude+'/'+location.coords.longitude)
+        fetch('http://10.114.41.78/developpement/symfony/webservices/public/customers/coord/'+location.coords.latitude+'/'+location.coords.longitude)
       .then((response) => response.json())
       .then((json) =>setData(json))
       .catch((error)=>console.error(error))

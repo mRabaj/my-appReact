@@ -1,11 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import {ActivityIndicator, FlatList, StyleSheet, Button, View, Text, SafeAreaView} from 'react-native';
-import * as Location from 'expo-location';
+
+import { Form } from 'redux-form' 
 
 
 
 const ThirdPage = ({ route, navigation }) => {
-
 
 
 
@@ -18,25 +18,25 @@ const ThirdPage = ({ route, navigation }) => {
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-            <form>
-          <label>
-            Participe :
-            <input
-              name="isGoing"
-              type="checkbox"
-           
-             />
-          </label>
-          <br />
-          <label>
-            Nombre d'invités :
-            <input
-              name="numberOfGuests"
-              type="number"
-              
-              />
-          </label>
-        </form>
+            <Field
+					name="login"
+					label="Identifiant"
+					textContentType="username"
+					autoCorrect={false}
+					autoCapitalize="none"
+					component={TextInput}
+					icon="person"
+				/>
+				<Field
+					name="password"
+					label="Mot de passe"
+					textContentType="password"
+					secureTextEntry={true}
+					autoCorrect={false}
+					autoCapitalize="none"
+					component={TextInput}
+					icon="key"
+				/>
          
           <Button
             onPress={
